@@ -1,0 +1,20 @@
+<h3 class="title">
+    {{ sports?.title }}
+</h3>
+<img (click)="imageClicked()" *ngIf="sports?.imgURL" class="image" [src]="sports?.imgURL">
+<p>
+    {{ sports?.description }}
+</p>
+<div class="meta-data">
+    <div class="creator">
+        {{ sports?.creator}}
+    </div>
+    <div *ngIf="sports?.type" class="sports?.type">
+        {{ sports?.type }}
+    </div>
+    <div class="tags" *ngIf="sports?.tags">
+        <span class="tag" *ngFor="let tag of sports?.tags">
+            #{{ tag }}
+        </span>
+    </div>
+</div>
