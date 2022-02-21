@@ -20,3 +20,6 @@
 
   <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'All-rounder'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
                     [sports]="item" class="All-rounder" [class.found]="item.title == search.value"></app-content-card>
+
+
+                    
