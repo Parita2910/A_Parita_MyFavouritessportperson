@@ -1,2 +1,22 @@
-<app-content-card *ngFor="let item of sportsList; first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
-    [sports]="item"></app-content-card>
+<div class="search">
+    <input #search>
+    <button (click)="checkForTitle(search.value)">Check For Title</button>
+    <h4 class="success" *ngIf="searchFlag">Title found</h4>
+    <h4 class="fail" *ngIf="!searchFlag">Title not found</h4>
+
+  </div>
+  
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+      [sports]="item" class="notype" [class.found]="item.title == search.value"></app-content-card>
+  
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'Batsman'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+                    [sports]="item" class="Batsman" [class.found]="item.title == search.value"></app-content-card>
+  
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'Baller'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+                    [sports]="item" class="Baller" [class.found]="item.title == search.value"></app-content-card>
+  
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'right-winger'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+                    [sports]="item" class="right-winger" [class.found]="item.title == search.value"></app-content-card>
+
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'All-rounder'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+                    [sports]="item" class="All-rounder" [class.found]="item.title == search.value"></app-content-card>
