@@ -32,7 +32,7 @@ export class ContentListComponent implements OnInit {
       title: "Viral Kohli",
       description: "Indian Captain",
       creator: "Indian Cricket Team",
-      imgURL: "https://www.southasianweekender.ca/wp-content/uploads/2020/11/Virat.jpg",
+      imgURL: "",
       type: "Batsman",
       tags: ["IndianCaptain", "MostSuccessfulPlayer"]
     }, {
@@ -48,7 +48,7 @@ export class ContentListComponent implements OnInit {
       title: "Stephen Curry",
       description: "American professional basketball player",
       creator: "NBA",
-      imgURL: "https://s1.ibtimes.com/sites/www.ibtimes.com/files/styles/full/public/2017/05/31/gettyimages-682346056.jpg",
+      imgURL: "",
       tags: ["GoldenStateWarriors","NBAChampion"]
     }, {
       id: 5,
@@ -63,7 +63,7 @@ export class ContentListComponent implements OnInit {
       title: "Ravindra Jadeja",
       description: "Indian international cricketer",
       creator: "Indian Cricket Team",
-      imgURL: "https://imagevars.gulfnews.com/2019/07/05/Ravindra-Jadeja_16bc1cc61a4_large.jpg",
+      imgURL: "",
       type: "All-rounder" ,
       tags: ["#fastestleftarmer","TerrificFilder"]
     }];
