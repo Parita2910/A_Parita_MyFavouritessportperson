@@ -1,22 +1,47 @@
 :host{
-    border: 1px solid #0000ff;
+    border: 3px solid black;
     display: block;
-    margin: 16px auto;
-    padding: 8px;
-    width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 800px;
     text-align: center;
 }
+
 :host.first-sports{
-    border: 2px solid #000;
+    border: 3px solid black;
 }
-.image{
-    width: 300px;
-}
-.tag{
-    display: inline-block;
-    border-radius: 10px;
-    border: 1px solid #ff0000;
-    background-color:aqua;
-    margin: 8px;
-    padding: 8px;
-}
+:host.notype{
+    background-color: cadetblue;
+    text-decoration: underline;
+  }
+  :host.Batsman{
+    background-color: brown;
+    text-decoration: underline;
+  }
+  :host.Baller{
+    background-color: darkolivegreen;
+    text-decoration: underline;
+  }
+  :host.right-winger{
+    background-color: lightseagreen;
+    text-decoration: underline;
+  }
+  :host.All-rounder{
+    background-color:mediumseagreen;
+    text-decoration: underline;
+  }
+  :host.found{
+    border-color:turquoise;
+    border-width: 12px;
+  }
+  .image{
+      width: 400px;
+  }
+  .tag{
+      display: inline-block;
+      border-radius: 6px;
+      border: 3px solid lightcoral;
+      background-color:lawngreen;
+      margin: 15px;
+      padding: 10px;
+  }

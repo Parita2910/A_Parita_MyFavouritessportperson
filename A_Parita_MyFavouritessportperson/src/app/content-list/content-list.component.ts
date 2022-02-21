@@ -8,14 +8,17 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent implements OnInit {
 
+  searchMessage: string = "";
+  searchFlag: boolean = false;
   sportsList: Content[];
   constructor() {
     this.sportsList = [{
       id: 0,
       title: "K.L.Rahul",
-      description: "Indian Cricket Player",
+      description: "Indian international cricketer",
       creator: "Indian Cricket Team",
       imgURL: "https://imagevars.gulfnews.com/2019/12/19/KL-Rahul_16f1ef8d4ee_large.jpg",
+      type: "Batsman" ,
       tags: ["T20Player", "ODIPlayer"]
     }, {
       id: 1,
@@ -30,6 +33,7 @@ export class ContentListComponent implements OnInit {
       description: "Indian Captain",
       creator: "Indian Cricket Team",
       imgURL: "https://www.southasianweekender.ca/wp-content/uploads/2020/11/Virat.jpg",
+      type: "Batsman",
       tags: ["IndianCaptain", "MostSuccessfulPlayer"]
     }, {
       id: 3,
@@ -37,6 +41,7 @@ export class ContentListComponent implements OnInit {
       description: "Portuguese professional footballer",
       creator: "Manchester United",
       imgURL: "https://image-cdn.essentiallysports.com/wp-content/uploads/IMG_20200101_180215-scaled.jpg",
+      type: "right-winger" ,
       tags: ["#BestFootballerOfAllTime","HandsomePlayer"]
     }, {
       id: 4,
@@ -48,14 +53,38 @@ export class ContentListComponent implements OnInit {
     }, {
       id: 5,
       title: "Jasprit Bumrah",
-      description: " Indian international cricketer",
+      description: "Indian international cricketer",
       creator: "Indian Cricket Team",
       imgURL: "https://resources.pulse.icc-cricket.com/ICC/photo/2019/07/07/b7407bba-8fc7-4c7f-8ec6-6e2c3166865a/Bumrah.jpg",
+      type: "Baller",
       tags: ["FastBaller","RightArm"]
+    }, {
+      id: 3,
+      title: "Ravindra Jadeja",
+      description: "Indian international cricketer",
+      creator: "Indian Cricket Team",
+      imgURL: "https://imagevars.gulfnews.com/2019/07/05/Ravindra-Jadeja_16bc1cc61a4_large.jpg",
+      type: "All-rounder" ,
+      tags: ["#fastestleftarmer","TerrificFilder"]
     }];
   }
 
   ngOnInit(): void {
+  }
+
+  checkForTitle(searchValue: string): void{
+    let searchList = this.sportsList.filter(c => c.title == searchValue);
+    if (searchList.length > 0){
+      this.searchMessage  = "Found the sports!";
+      this.searchFlag = true;
+    }
+    else{
+      this.searchMessage  = "No sport with that title";
+      this.searchFlag = false;
+    }
+  }
+  donothing(){
+
   }
 
 }
