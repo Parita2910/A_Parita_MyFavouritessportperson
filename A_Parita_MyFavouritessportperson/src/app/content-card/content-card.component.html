@@ -1,7 +1,15 @@
 <h3 class="title">
     {{ sports?.title }}
 </h3>
-<img (click)="imageClicked()" *ngIf="sports?.imgURL" class="image" [src]="sports?.imgURL">
+
+<div *ngIf="sports?.imgURL; else defaultImage">
+    <img (click)="imageClicked()" *ngIf="sports?.imgURL" class="image" [src]="sports?.imgURL">
+</div>
+
+<ng-template #defaultImage>
+    <img src="https://www.computerhope.com/jargon/g/guest-user.jpg">
+</ng-template>
+
 <p>
     {{ sports?.description }}
 </p>
