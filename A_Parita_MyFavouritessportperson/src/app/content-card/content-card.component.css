@@ -12,23 +12,18 @@
 }
 :host.notype{
     background-color: cadetblue;
-    text-decoration: underline;
   }
   :host.Batsman{
     background-color: brown;
-    text-decoration: underline;
   }
   :host.Baller{
     background-color: darkolivegreen;
-    text-decoration: underline;
   }
   :host.right-winger{
     background-color: lightseagreen;
-    text-decoration: underline;
   }
   :host.All-rounder{
     background-color:mediumseagreen;
-    text-decoration: underline;
   }
   :host.found{
     border-color:turquoise;
@@ -44,4 +39,12 @@
       background-color:lawngreen;
       margin: 15px;
       padding: 10px;
+  }
+
+  .hoveraffect {
+    text-decoration: underline;
+  }
+  
+  .boldtype{
+    font-weight: bold;
   }

@@ -9,12 +9,17 @@
     <div class="creator">
         {{ sports?.creator}}
     </div>
-    <div *ngIf="sports?.type" class="sports?.type">
-        {{ sports?.type }}
+    <div *ngIf="sports?.type" Hover affect="hoveraffect" class="sports?.type">
+        <h4>{{ sports?.type }}</h4>
     </div>
-    <div class="tags" *ngIf="sports?.tags">
+    <div class="tags" Hover affect="boldtype" *ngIf="sports?.tags">
         <span class="tag" *ngFor="let tag of sports?.tags">
             #{{ tag }}
         </span>
     </div>
 </div>
+
+
+
+
+
