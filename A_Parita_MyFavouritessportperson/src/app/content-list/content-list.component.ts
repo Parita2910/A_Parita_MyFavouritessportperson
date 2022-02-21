@@ -59,7 +59,7 @@ export class ContentListComponent implements OnInit {
       type: "Baller",
       tags: ["FastBaller","RightArm"]
     }, {
-      id: 3,
+      id: 6,
       title: "Ravindra Jadeja",
       description: "Indian international cricketer",
       creator: "Indian Cricket Team",
