@@ -21,7 +21,7 @@ export class ContentListComponent implements OnInit {
       id: 1,
       title: "David Beckham",
       description: "English Former Professional Footballer",
-      creator: "England",
+      //creator: "England",
       imgURL: "https://media.gq.com/photos/5b7eb51148ac8415e718f9ec/16:9/pass/david-beckham-gq-0416-cover-sq.jpg",
       tags: ["Manchester United","Real Madrid"]
     }, {
@@ -35,7 +35,7 @@ export class ContentListComponent implements OnInit {
       id: 3,
       title: "Cristiano Ronaldo",
       description: "Portuguese professional footballer",
-      creator: "Manchester United",
+      //creator: "Manchester United",
       imgURL: "https://image-cdn.essentiallysports.com/wp-content/uploads/IMG_20200101_180215-scaled.jpg",
       tags: ["#BestFootballerOfAllTime","HandsomePlayer"]
     }, {

@@ -1,16 +1,40 @@
 <h3 class="title">
     {{ sports?.title }}
 </h3>
+<<<<<<< Updated upstream
 <img (click)="imageClicked()" *ngIf="sports?.imgURL" class="image" [src]="sports?.imgURL">
+=======
+
+<div *ngIf="sports?.imgURL; else defaultImage">
+    <img (click)="imageClicked()" *ngIf="sports?.imgURL" class="image" [src]="sports?.imgURL">
+</div>
+
+<ng-template #defaultImage>
+    <img (click)="imageClicked()" src="https://www.computerhope.com/jargon/g/guest-user.jpg">
+</ng-template>
+
+>>>>>>> Stashed changes
 <p>
     {{ sports?.description }}
 </p>
+
 <div class="meta-data">
+<<<<<<< Updated upstream
     <div class="creator">
         {{ sports?.creator}}
     </div>
     <div *ngIf="sports?.type" class="sports?.type">
         {{ sports?.type }}
+=======
+    
+        <div *ngIf="sports?.creator" class="sports?.creator">
+         {{ sports?.creator}}
+        </div>
+    
+    
+    <div *ngIf="sports?.type" Hover affect="hoveraffect" class="sports?.type">
+        <h4>{{ sports?.type }}</h4>
+>>>>>>> Stashed changes
     </div>
     <div class="tags" *ngIf="sports?.tags">
         <span class="tag" *ngFor="let tag of sports?.tags">
