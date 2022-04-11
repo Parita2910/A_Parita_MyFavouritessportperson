@@ -11,6 +11,7 @@ export class ContentCardComponent implements OnInit {
 
   constructor() {
 
+    this.Sports = { id: 0, title: '', description: '', creator: '', imgURL: '' };
   }
 
 
