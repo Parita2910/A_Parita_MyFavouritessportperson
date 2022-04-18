@@ -1,9 +1,9 @@
 {
   "name": "a-parita-my-favouritessportperson",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "http-server -p 8080 -c-1 dist/A_Parita_MyFavouritessportperson",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@angular/service-worker": "~13.2.0",
+    "http-server": "^13.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
