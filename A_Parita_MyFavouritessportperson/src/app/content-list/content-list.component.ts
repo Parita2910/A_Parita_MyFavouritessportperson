@@ -83,8 +83,10 @@ export class ContentListComponent implements OnInit {
       this.searchFlag = false;
     }
   }
-  donothing(){
-
+  addContentToParent(contentFromChild: Content) {
+    console.log("got to the parent", contentFromChild);
+    this.sportsList.push(contentFromChild);
+    console.log("what's actually in the sports list? ", this.sportsList);
+    this.sportsList = [...this.sportsList]; 
   }
-
 }
