@@ -6,8 +6,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { FiltersPipe } from './filters.pipe';
 import { HoverDirective } from './hover-affect.directive';
-import { CreateContentComponent } from './create-content/create-content.component';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,11 +15,7 @@ import { FormsModule } from '@angular/forms';
     ContentListComponent,
     FiltersPipe,
     HoverDirective,
-    CreateContentComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
