@@ -1,7 +1,20 @@
 
 <app-modify-content-component (newContentEvent)="addContentToList($event)"></app-modify-content-component>
   
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+      [sports]="item" class="notype" ></app-content-card>
 
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'Batsman'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+                    [sports]="item" class="Batsman" ></app-content-card>
+  
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'Baller'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+                    [sports]="item" class="Baller" ></app-content-card>
+  
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'right-winger'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+                    [sports]="item" class="right-winger" ></app-content-card>
+
+  <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'All-rounder'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
+                    [sports]="item" class="All-rounder" ></app-content-card>
 
 
                     
