@@ -8,18 +8,13 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent implements OnInit {
   @Input() sports?: Content;
-
   constructor() {
 
-    this.Sports = { id: 0, title: '', description: '', creator: '', imgURL: '' };
+    
+    this.sports = { id: 0, title: '', description: '', creator: '', imgURL: '' };
+
   }
-
-
   ngOnInit(): void {
-  }
-
-  imageClicked(): void {
-    console.log("ID: ", this.sports?.id, ", Title: ", this.sports?.title);
   }
 
 }

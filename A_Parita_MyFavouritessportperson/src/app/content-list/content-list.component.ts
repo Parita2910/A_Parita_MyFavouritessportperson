@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
-import { GamesService } from '../services/games.service';
+
+import { SportsService } from '../services/sports.service';
+
 
 @Component({
   selector: 'app-content-list',
@@ -9,26 +11,22 @@ import { GamesService } from '../services/games.service';
 })
 export class ContentListComponent implements OnInit {
 
-  bunchOfSports: Content[];
 
+  sportslist: Content[];
+  gallery_id!: number;
+  oneItem:Content[] = [];
   constructor(private SportsService: SportsService) {
-    this.bunchOfSports = [];
+    this.sportslist = [];
     
    }
-   ngOnInit(): void {
-    this.getSportsFromServer();
+  
+  ngOnInit(): void {
+    this.SportsService.getContentObs().subscribe(sportArray => this.sportslist = sportArray);
+    this.SportsService.getContentSports(3).subscribe(fetsports => {
+      this.oneItem = fetsports;
+    });
   }
 
-  getSportsFromServer(): void{
-    this.SportsService.getContent().subscribe(sportsArray => this.bunchOfSports = sportsArray);
-  }
-
-  addSportsToList(newSportsFromChild: Content): void {
-    this.SportsService.addContent(newSportsFromChild).subscribe(newContentFromServer => {
-      console.log("New content from server: ", newContentFromServer);
-     
-      this.bunchOfSports.push(newContentFromServer);
-      this.bunchOfSports = [...this.bunchOfSports]; 
 
     });
   }
