@@ -8,6 +8,7 @@ import { FiltersPipe } from './filters.pipe';
 import { HoverDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import { FormsModule } from '@angular/forms';
+import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     ContentListComponent,
     FiltersPipe,
     HoverDirective,
-    CreateContentComponent
+    CreateContentComponent,
+    ModifyContentComponentComponent
   ],
   imports: [
     BrowserModule,

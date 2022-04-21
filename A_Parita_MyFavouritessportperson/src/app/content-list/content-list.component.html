@@ -1,25 +1,20 @@
-<app-create-content (newContentEvent)="addContentToParent($event)"></app-create-content>
-<div class="search">
-    <input #search>
-    <button (click)="checkForTitle(search.value)">Check For Title</button>
-    <h4 class="success" *ngIf="searchFlag">Title found</h4>
-    <h4 class="fail" *ngIf="!searchFlag">Title not found</h4>
-  </div>
+<app-modify-content-component (newContentEvent)="addContentToList($event)"></app-modify-content-component>
+
   
   <app-content-card *ngFor="let item of (sportsList | contentTypeFilter); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
-      [sports]="item" class="notype" [class.found]="item.title == search.value"></app-content-card>
+      [sports]="item" class="notype" ></app-content-card>
 
   <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'Batsman'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
-                    [sports]="item" class="Batsman" [class.found]="item.title == search.value"></app-content-card>
+                    [sports]="item" class="Batsman" ></app-content-card>
   
   <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'Baller'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
-                    [sports]="item" class="Baller" [class.found]="item.title == search.value"></app-content-card>
+                    [sports]="item" class="Baller" ></app-content-card>
   
   <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'right-winger'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
-                    [sports]="item" class="right-winger" [class.found]="item.title == search.value"></app-content-card>
+                    [sports]="item" class="right-winger" ></app-content-card>
 
   <app-content-card *ngFor="let item of (sportsList | contentTypeFilter: 'All-rounder'); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
-                    [sports]="item" class="All-rounder" [class.found]="item.title == search.value"></app-content-card>
+                    [sports]="item" class="All-rounder" ></app-content-card>
 
 
                     
