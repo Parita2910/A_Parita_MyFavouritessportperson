@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+
 import { SportsService } from '../services/sports.service';
+
 
 @Component({
   selector: 'app-content-list',
@@ -8,6 +10,7 @@ import { SportsService } from '../services/sports.service';
   styleUrls: ['./content-list.component.css']
 })
 export class ContentListComponent implements OnInit {
+
 
   sportslist: Content[];
   gallery_id!: number;
@@ -24,4 +27,7 @@ export class ContentListComponent implements OnInit {
     });
   }
 
+
+    });
+  }
 }

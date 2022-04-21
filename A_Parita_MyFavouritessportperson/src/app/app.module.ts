@@ -6,6 +6,8 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { FiltersPipe } from './filters.pipe';
 import { HoverDirective } from './hover-affect.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { HoverDirective } from './hover-affect.directive';
     ContentCardComponent,
     ContentListComponent,
     FiltersPipe,
-    HoverDirective
+    HoverDirective,
+    ModifyContentComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
