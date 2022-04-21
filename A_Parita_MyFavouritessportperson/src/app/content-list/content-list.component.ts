@@ -28,6 +28,25 @@ export class ContentListComponent implements OnInit {
   }
 
 
+  checkForTitle(searchValue: string): void{
+    let searchList = this.sportsList.filter(c => c.title == searchValue);
+    if (searchList.length > 0){
+      this.searchMessage  = "Found the sports!";
+      this.searchFlag = true;
+    }
+    else{
+      this.searchMessage  = "No sport with that title";
+      this.searchFlag = false;
+    }
+  }
+  addContentToParent(contentFromChild: Content) {
+    console.log("got to the parent", contentFromChild);
+    this.sportsList.push(contentFromChild);
+    console.log("what's actually in the sports list? ", this.sportsList);
+    this.sportsList = [...this.sportsList]; 
+=======
+
     });
+
   }
 }

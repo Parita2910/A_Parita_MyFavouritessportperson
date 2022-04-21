@@ -10,7 +10,7 @@ export class FiltersPipe implements PipeTransform {
     console.log("filter value: ", filterByThisType);
     return contentList.filter(c => {
       if (filterByThisType) {
-        return c.type == filterByThisType;
+        return c.type?.toLowerCase() == filterByThisType.toLowerCase();
       } else { 
         return !c.type; 
       }
