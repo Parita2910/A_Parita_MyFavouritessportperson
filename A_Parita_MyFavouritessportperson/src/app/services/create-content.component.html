@@ -1,7 +1,9 @@
 <div>
+    ID: <input [(ngModel)]="tempId">
+</div>
+<div>
     Title: <input [(ngModel)]="newContent.title">
 </div>
-
 <div>
     Image: <input [(ngModel)]="newContent.imgURL">
 </div>
@@ -18,7 +20,8 @@
     Tags: <input [(ngModel)]="tempTags">
 </div>
 <div>
-    <button (click)="addContentFromChild()">Add New Sport</button>
+    <button (click)="addContentFromChild()">Add Sportsperson</button>
 </div>
-
-
+<div class="error" *ngIf="errorMessage">
+    {{ errorMessage }}
+</div> 

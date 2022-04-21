@@ -1,5 +1,5 @@
-<app-modify-content-component (newContentEvent)="addContentToList($event)"></app-modify-content-component>
 
+<app-modify-content-component (newContentEvent)="addContentToList($event)"></app-modify-content-component>
   
   <app-content-card *ngFor="let item of (sportsList | contentTypeFilter); first as isFirstSportsOnList" [class.first-sports]="isFirstSportsOnList"
       [sports]="item" class="notype" ></app-content-card>
